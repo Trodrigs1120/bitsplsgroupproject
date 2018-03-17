@@ -1,0 +1,23 @@
+<h1> our rap artists </h1>
+
+<h3> Here are your rap stats! Get your fresh, pipin' hot rap stats!</h3>
+
+<br>
+
+<ul>
+
+{{#each rapStats}}
+
+	<li>
+	
+		<p> {{this.name}} <br>
+
+		{{this.uWords}} unique words employed <br>
+
+		{{this.uWordsProp}} percent of those words</p> <br>
+
+	</li>
+
+{{/each}}
+
+</ul>
