@@ -158,7 +158,7 @@ function function3(){
           function3()
         } else {
          
-          console.log("program ended")
+          
           console.log(ScrapeContainer[0].AlbumName)
           console.log(ScrapeContainer[0].Artist)
           console.log(ScrapeContainer[0].Tracks)
