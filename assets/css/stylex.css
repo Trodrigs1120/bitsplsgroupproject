@@ -39,8 +39,29 @@ h2 {
 	margin-left: 4%;
 }
 
-.steely1 {
 
+@font-face {
+  font-family: 'steely';
+  src: url('./Panda-Power-St.ttf'); /* IE9 Compat Modes */
+  src: url('./Panda-Power-St.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       /*url('webfont.woff2') format('woff2'), /* Super Modern Browsers */*/
+       /*url('webfont.woff') format('woff'), /* Pretty Modern Browsers */*/
+       url('./Panda-Power-St.ttf')  format('truetype'), /* Safari, Android, iOS */
+       /*url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */*/
+}
+
+
+/*body {
+  font-family: 'steely', Fallback, sans-serif;
+}*/
+
+
+.steely {
+	font-family: 'steely', Fallback, sans-serif;
+}
+
+.bigType {
+	font-size: 3em;
 }
 
 #centerHeading {
