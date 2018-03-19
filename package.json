@@ -1,7 +1,7 @@
 {
-  "name": "Group_Project-",
+  "name": "bitsplsgroupproject",
   "version": "1.0.0",
-  "description": "awesome website",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,20 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangcs907/Group_Project-.git"
+    "url": "git+https://github.com/Trodrigs1120/bitsplsgroupproject.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yangcs907/Group_Project-/issues"
+    "url": "https://github.com/Trodrigs1120/bitsplsgroupproject/issues"
   },
-  "homepage": "https://github.com/yangcs907/Group_Project-#readme",
+  "homepage": "https://github.com/Trodrigs1120/bitsplsgroupproject#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.10",
     "mysql": "^2.15.0"
-  }
 }
