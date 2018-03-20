@@ -2,7 +2,7 @@ var Sequelize = require ("sequelize");
 
 var sequelize = require ("../config/connection.js");
 
-var artist = sequelize.define ("artist", {
+var Artist = sequelize.define ("artist", {
 	
 	id: {
 		type: Sequelize.INTEGER,
@@ -41,3 +41,7 @@ var artist = sequelize.define ("artist", {
 }, {
 	timestamps: false
 });
+
+Artist.sync ();
+
+module.exports = Artist;
