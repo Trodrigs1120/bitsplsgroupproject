@@ -22,4 +22,33 @@ module.exports = function (app) {
 		});
 	});
 
+
+	app.post ("/api/new", function (req, res) {
+		
+		Artist.create ({
+			name: req.body.name,
+			uWordsNum: req.body.uWordsNum,
+			uWords: req.body.uWords,
+			uWordsProp: req.body.uWordsProp,
+			wordsUArtist req.body.wordsUArtist,
+			numSongs: req.body.numSongs,
+			wordsPerSong: req.body.wordsPerSong
+		})
+
+
+
+
+
+		Artist.findAll ({
+			where: {
+				name: req.params.artist
+			}
+		})
+		.then (function (results) {
+			res.json (results);
+		});
+	});
+
+
+
 }

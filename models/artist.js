@@ -27,7 +27,7 @@ var Artist = sequelize.define ("artist", {
 		type: Sequelize.FLOAT,
 	},
 
-	wordsUToArtist: {
+	wordsUArtist: {
 		type: Sequelize.STRING,
 	},
 
