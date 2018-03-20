@@ -23,6 +23,10 @@ module.exports = function (app) {
 	});
 
 
+	Project.findAll({order: 'title DESC'})
+// yields ORDER BY title DESC
+
+
 	app.post ("/api/new", function (req, res) {
 		
 		Artist.create ({
@@ -35,20 +39,26 @@ module.exports = function (app) {
 			wordsPerSong: req.body.wordsPerSong
 		})
 
+	app.delete ("/api/delete", function (req, res) {
 
-
-
-
-		Artist.findAll ({
-			where: {
-				name: req.params.artist
+		Artist.destroy ({
+			where:  {
+				id: req.body.id
 			}
-		})
-		.then (function (results) {
-			res.json (results);
 		});
 	});
 
 
+};
 
-}
+
+
+	// 	Artist.findAll ({
+	// 		where: {
+	// 			name: req.params.artist
+	// 		}
+	// 	})
+	// 	.then (function (results) {
+	// 		res.json (results);
+	// 	});
+	// });
