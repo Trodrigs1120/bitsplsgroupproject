@@ -27,8 +27,18 @@ video {
 
 #theModalButton {
 	opacity: 0.8;
+	text-decoration-color: white;
 }
 
+.btn-primary-invis {
+  background-color: transparent;
+  border-color: #ccc;
+  text-decoration-color: blue;
+}
+
+.whiteText {
+	color: white;
+}
 
 /*Navigation Bar*/
 nav {
