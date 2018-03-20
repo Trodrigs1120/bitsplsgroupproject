@@ -25,7 +25,7 @@ module.exports = function (app) {
 
 	app.get ("/api/:artist/up", function (req, res) {
 	Artist.findAll ({
-			order: 'uWordsProp'
+			order: [["uWordsProp", "DESC"]]
 		})
 		.then ({
 			where: {
