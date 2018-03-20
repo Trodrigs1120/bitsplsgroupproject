@@ -23,9 +23,22 @@ module.exports = function (app) {
 	});
 
 
-	Project.findAll({order: 'title DESC'})
+	app.get ("/api/:artist/up", function (req, res) {
+	Artist.findAll ({
+			order: 'uWordsProp'
+		})
+		.then ({
+			where: {
+				name: req.params.artist
+			}
+		})
+		.then (function (results) {
+			res.json (results)
+
+		})
 // yields ORDER BY title DESC
 
+	}
 
 	app.post ("/api/new", function (req, res) {
 		
