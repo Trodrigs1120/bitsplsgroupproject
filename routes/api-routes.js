@@ -23,7 +23,7 @@ module.exports = function (app) {
 	});
 
 
-	app.get ("/api/:artist/up", function (req, res) {
+	app.get ("/api/:artist/threeAbove", function (req, res) {
 	Artist.findAll ({
 			order: [["uWordsProp", "DESC"]]
 		})
@@ -36,9 +36,9 @@ module.exports = function (app) {
 			res.json (results)
 
 		})
-// yields ORDER BY title DESC
 
 	}
+
 
 	app.post ("/api/new", function (req, res) {
 		
