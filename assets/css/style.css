@@ -1,0 +1,139 @@
+/*Motion Background*/
+
+body {
+	background-color: black;
+}
+
+
+video {
+
+	position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100
+}
+
+#ourVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.2;
+}
+
+
+#theModalButton {
+	opacity: 0.8;
+	text-decoration-color: white;
+}
+
+.btn-primary-invis {
+  background-color: transparent;
+  border-color: #ccc;
+  text-decoration-color: blue;
+}
+
+.whiteText {
+	color: white;
+}
+
+/*Navigation Bar*/
+
+h2 {
+	margin-left: 4%;
+}
+
+
+@font-face {
+  font-family: 'steely';
+  src: url('./Panda-Power-St.ttf'); /* IE9 Compat Modes */
+  src: url('./Panda-Power-St.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       /*url('webfont.woff2') format('woff2'), /* Super Modern Browsers */*/
+       /*url('webfont.woff') format('woff'), /* Pretty Modern Browsers */*/
+       url('./Panda-Power-St.ttf')  format('truetype'), /* Safari, Android, iOS */
+       /*url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */*/
+}
+
+
+/*body {
+  font-family: 'steely', Fallback, sans-serif;
+}*/
+
+
+.steely {
+	font-family: 'steely', Fallback, sans-serif;
+}
+
+.bigType {
+	font-size: 3em;
+}
+
+.biggishType {
+	font-size: 2.3em;
+}
+
+#centerHeading {
+	align-self: center;
+}
+
+#userID {
+	/*background-color: blue;*/
+	/*margin-left: auto;*/
+}
+
+#loginRegister {
+	/*background-color: blue;*/
+	/*margin-right: auto;*/
+}
+
+#artistBlock {
+
+}
+
+#artistImage {
+	/*position: absolute;*/
+	margin-left: -40%;
+	height: 220px;
+	width: 220px;
+	
+}
+
+#frontpage {
+
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	margin: 80px;
+	margin-top: 40px;
+	opacity: 0.8;
+}
+
+#artistpage {
+
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	margin: 80px;
+	margin-top: 40px;
+	opacity: 0.8;
+}
+
+.hhLiterati {
+	font-size: 30px;
+}
+
+#bigName {
+	font-size: 2.5em;
+	margin-left: -40%;
+}
+
+#rapper-search {
+	margin: auto;
+
+
+}
