@@ -41,15 +41,6 @@ video {
 }
 
 /*Navigation Bar*/
-nav {
-
-	color: #996633;
-	font-family: 'Redressed', cursive;
-	display: flex;
-	letter-spacing: 2px;
-	background: white;
-	opacity: 0.8;
-}
 
 h2 {
 	margin-left: 4%;
@@ -103,7 +94,7 @@ h2 {
 }
 
 #artistImage {
-	position: absolute;
+	/*position: absolute;*/
 	margin-left: -40%;
 	height: 220px;
 	width: 220px;
@@ -136,13 +127,6 @@ h2 {
 	font-size: 30px;
 }
 
-
-#quote {
-
-	margin-bottom: 50px;
-
-}
-
 #bigName {
 	font-size: 2.5em;
 	margin-left: -40%;
@@ -152,24 +136,4 @@ h2 {
 	margin: auto;
 
 
-}
-
-.card-deck {
-
-	margin-bottom: 50px;
-
-}
-
- .card-img-top {
-
-	height: 20rem;
-
-} 
-
-
-
-#recipe, #media {
-	margin-top: 30px;
-	color: brown;
-	margin-bottom: 50px;
 }
