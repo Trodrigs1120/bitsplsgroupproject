@@ -8,15 +8,18 @@
 
   <title>Hip-Hop Literati</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <script type="text/javascript" src="assets/javascript/main.js"></script>
+  <!-- <script src="./assets/javascript/bootstrap-typeahead.js"></script> -->
+  <script src="./assets/javascript/jquery-3.3.1.min.js"></script>
+  <script  type="text/javascript" src="./assets/javascript/typeahead.bundle.min.js"></script>
 
 </head>
 
@@ -87,9 +90,17 @@
 
   		<div class="col-md-4" id="rapper-search">
 
-  			<input class="form-control form-control-lg" type="text" placeholder=" (choose a rap artist for analysis) " id="rapper-input"> <br>
+<!--   			<input class="form-control form-control-lg" type="text" placeholder=" (choose a rap artist for analysis) " id="rapper-input"> <br> -->
+
+        <input type="text" class="typeahead tt-query" autocomplete="off" spellcheck="false">
 
 <!--  (note to self - will be using TypeAhead for this next bit, for the autocomplete functionality) -->
+
+        <div style="margin: 50px 50px">
+            <label for="artist_search">artist search: </label>
+            <input id="artist_search" type="text" data-provide="typeahead"
+               data-source='["Eminem", "KRS One", "MC Lyte"]'>
+        </div>
 
         <div class="ui-widget">
             <label>rap artist: </label>
@@ -219,6 +230,34 @@
                             </div>
                         </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    // Defining the local dataset
+    var cars = ['Audi', 'BMW', 'Bugatti', 'Ferrari', 'Ford', 'Lamborghini', 'Mercedes Benz', 'Porsche', 'Rolls-Royce', 'Volkswagen', "MungoJerry", "SRS", "zTEST"];
+    
+    // Constructing the suggestion engine
+    var cars = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: cars
+    });
+    
+    // Initializing the typeahead
+    $('.typeahead').typeahead({
+        hint: true,
+        highlight: true, /* Enable substring highlighting */
+        minLength: 1 /* Specify minimum characters required for showing result */
+    },
+    {
+        name: 'cars',
+        source: cars
+    });
+});  
+</script>
+
 </body>
 
 </html>
+
+
+<!-- ALL HAIL THE CHECKING-FOR-LATEST-CHANGES TEXT -->
