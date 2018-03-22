@@ -4,7 +4,7 @@
       $(document).ready (function () {
 
         var source = $("#statsTemplate").html ();
-        var template = Handlebars.compile (source);
+        var template = Handlebars.compile(source);
 
         var context = {
           artist: "artist-specific.data.from.db-orm",
@@ -17,12 +17,12 @@
 
           uniqueWordsPerSong: "artist-specific.data.from.db-orm",
 
-          percentUnique: "artist-specific.queried.data.from.db-orm",
+          percentUnique: "artist-specific.queried.data.from.db-orm"
         }
 
-        var new_html = template (context);
+        var new_html = template(context);
 
-        $("statsTemplate").html (new_html);
+        $("#statsRendered").html(new_html);
 
     });
 
