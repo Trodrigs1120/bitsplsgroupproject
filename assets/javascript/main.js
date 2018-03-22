@@ -7,17 +7,17 @@
         var template = Handlebars.compile(source);
 
         var context = {
-          artist: "artist-specific.data.from.db-orm",
+          artist: " the correct queried data for this",
 
-          uniqueWords: "artist-specific.data.from.db-orm",
+          uniqueWords: " the correct queried data for this",
 
-          numOfSongs: "artist-specific.data.from.db-orm",
+          numOfSongs: " the correct queried data for this",
 
-          wordsPerSong: "artist-specific.data.from.db-orm",
+          wordsPerSong: " the correct queried data for this",
 
-          uniqueWordsPerSong: "artist-specific.data.from.db-orm",
+          uniqueWordsPerSong: " the correct queried data for this",
 
-          percentUnique: "artist-specific.queried.data.from.db-orm"
+          percentUnique: " the correct queried data for this"
         }
 
         var new_html = template(context);
@@ -26,16 +26,16 @@
 
     });
 
-      $("#findRapStats").on("click", function(event) {
+      // $("#findRapStats").on("click", function(event) {
 
-        var stats = $(this).attr("rap-stats");//
+      //   var stats = $(this).attr("rap-stats");//
 
-        // event.preventDefault() can be used to prevent an event's default behavior.
-        // Here, it prevents the submit button from trying to submit a form when clicked
-        event.preventDefault();
+      //   // event.preventDefault() can be used to prevent an event's default behavior.
+      //   // Here, it prevents the submit button from trying to submit a form when clicked
+      //   event.preventDefault();
 
-        // Here we grab the text from the input box
-        var artistInput = $("#rapper-input").val().trim();
+      //   // Here we grab the text from the input box
+      //   var artistInput = $("#rapper-input").val().trim();
 
       
 
