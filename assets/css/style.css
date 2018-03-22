@@ -137,7 +137,9 @@ h2 {
 
 }
 
-
+#findRapStats {
+	margin-left: 12%;
+}
 
 .bs-example {
 	font-family: sans-serif;
@@ -186,4 +188,8 @@ h2 {
 }
 .tt-suggestion p {
 	margin: 0;
+}
+
+.tt-dropdown-menu {
+     background: none;
 }
