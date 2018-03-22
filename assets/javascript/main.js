@@ -7,17 +7,17 @@
         var template = Handlebars.compile (source);
 
         var context = {
-          artist: "some.queried.data.from.db.and.orm",
+          artist: "artist-specific.data.from.db-orm",
 
-          uniqueWords: "some.queried.data.from.db.and.orm",
+          uniqueWords: "artist-specific.data.from.db-orm",
 
-          numOfSongs: "some.queried.data.from.db.and.orm",
+          numOfSongs: "artist-specific.data.from.db-orm",
 
-          wordsPerSong: "some.queried.data.from.db.and.orm",
+          wordsPerSong: "artist-specific.data.from.db-orm",
 
-          uniqueWordsPerSong: "some.queried.data.from.db.and.orm",
+          uniqueWordsPerSong: "artist-specific.data.from.db-orm",
 
-          percentUnique: "some.queried.data.from.db.and.orm",
+          percentUnique: "artist-specific.queried.data.from.db-orm",
         }
 
         var new_html = template (context);
