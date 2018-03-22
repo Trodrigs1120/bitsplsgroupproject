@@ -34,34 +34,6 @@
 
 	</video>
 
-	<!--Nav Bar-->
-
-		<!-- <nav class="navbar navbar-expand-xl"> -->
-
-  		<!--Logo-->
-<!--   			<h2>Bits, Please</h2> -->
-
- 		<!--Responsive Dropdown Menu-->
-<!--  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-
-   			<span class="navbar-toggler-icon"></span>
-
- 			</button> -->
-
-
-<!-- 	<div class="collapse navbar-collapse" id="navbarText">
-
-    		<ul class="navbar-nav ml-auto">
-
-      			<li class="nav-item">
-
-      			</li>
-
-    		</ul>
-   </div> -->
-
-<!-- </nav> -->
-
 <!--Main-screen-->
 <div class="container" id="artistpage">
 
@@ -93,7 +65,7 @@
 
       <div class="col-md-8">
       
-        <p id=bigName> Artist Name - IN BIG TYPE </p>
+        <p id="nameRendered, bigName"> Artist Name - IN BIG TYPE </p>
 
       </div>
 
@@ -112,22 +84,37 @@
   <br>
 
   <br> -->
+  <div id="statsRendered">
 
-  <div class="row">
-    <p># of unique words found: </p>
+    artist: 
+    
+    # of unique words found:
+
+    # of songs:
+
+    words per song:
+
+    unique words per song:
+
+    percent unique:
+
   </div>
 
-  <div class="row">
-    <p>words unique to this artist: </p>
-  </div>
+  <script id="statsTemplate" type="text/x-handlebars-template">
+    <div>
+      <h3> artist: {{{artist}}} </h3>
+    
+      <h3># of unique words found: {{{uniqueWords}}} </h3>
 
-  <div class="row">
-    <p># of songs: </p>
-  </div>
+      <h3># of songs: {{{numOfSongs}}} </h3>
 
-  <div class="row">
-    <p>average # of words per song: </p>
-  </div>
+      <h3>words per song: {{{wordsPerSong}}} </h3>
+
+      <h3>unique words per song: {{{uniqueWordsPerSong}}} </h3>
+
+      <h3>percent unique: {{{ percentUnique}}} </h3>
+
+  </script>
 
 
 </body>

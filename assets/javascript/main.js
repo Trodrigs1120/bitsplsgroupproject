@@ -1,4 +1,8 @@
 // This .on("click") function will trigger the AJAX Call
+      
+
+
+
       $("#findRapStats").on("click", function(event) {
 
         var stats = $(this).attr("rap-stats");//
@@ -10,18 +14,24 @@
         // Here we grab the text from the input box
         var artistInput = $("#rapper-input").val().trim();
 
-        // var appId = "01d243ab"
+      $(document).ready (function () {
 
-        // var appId = "01d243ab"
+        var source = $("#statsTemplate").html ();
+        var template = Handlebars.compile (source);
 
-        // var appKey = "bc26b1df0c29vc47ef4g19c42e127664"
+        var context = {
+          artist: "some.queried.data.from.db.and.orm",
 
-        // Here we construct our URL
-        // var queryURL = "https://api.whatever.com/search?q=" + rapper + "&app_id=" + appId + "&app_key=" + appKey;
+          uniqueWords: "some.queried.data.from.db.and.orm",
 
-      //   $.ajax ({
-      //     url: queryURL,
-      //     method: "GET"
-      //   }).done(function(response) {
-      //     });
-      // });
+          numOfSongs: "some.queried.data.from.db.and.orm",
+
+          wordsPerSong: "some.queried.data.from.db.and.orm",
+
+          uniqueWordsPerSong: "some.queried.data.from.db.and.orm",
+
+          percentUnique: "some.queried.data.from.db.and.orm",
+        }
+
+
+    });
