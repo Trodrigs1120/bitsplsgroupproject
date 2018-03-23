@@ -138,11 +138,34 @@ function getArtist(artistStr) {
             if (row && row.length) {
                 console.log('Artist was found!');
                 console.log(jsonify(row));
+                var artistCol = [jsonify(row)];
+                artistCol += getRandArtist();
+                artistCol += getRandArtist();
                 connection.end();
-                return jsonify(row);
+                return artistCol;
             } else {
                 console.log('No artist: ' + artistStr + ' found!');
                 connection.end();
+                return;
+            }
+        }
+    });
+}
+
+function getRandArtist() {
+    console.log("Getting random artist data...\n");
+    connection.query("SELECT * FROM artists ORDER BY RAND() LIMIT 1;", function (err, row) {
+        if (err) {
+            console.log('Error in DB');
+            console.log(err);
+            return;
+        } else {
+            if (row && row.length) {
+                console.log('Random artist was found!');
+                console.log(jsonify(row));
+                return jsonify(row);
+            } else {
+                console.log('No artist found!');
                 return;
             }
         }
