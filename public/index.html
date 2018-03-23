@@ -29,7 +29,7 @@
 <!--video background loop-->
 	<video autoplay muted loop id="ourVideo">
 
-		<source src="assets/images/audienceBacker.mp4" type="video/mp4">
+		<source src="../assets/images/audienceBacker.mp4" type="video/mp4">
 
 	</video>
 
@@ -39,7 +39,7 @@
   <div class="row">
     
     <div class="col-md-4" id="userID">
-      <!-- <p class="invis">(UserID signifier - when visible)</p> -->
+      <p class="invis">(UserID signifier - when visible)</p>
     </div>
 
     <div class="col-md-4">
@@ -87,13 +87,13 @@
 
   <br>
 
-	<div class="row">
+  <div class="row">
 
-  		<div class="col-md-4">
+      <div class="col-md-4" id="searchDiv">
 
         <input type="text" class="typeahead tt-query" id="rapper-search" autocomplete="off" spellcheck="false">
 
-  			<button type="button" class="btn btn-success" id="findRapStats"> <a href="/api/all">Get my lyrical STATS!</a></button>
+        <button type="button" class="btn btn-success" id="findRapStats"> <a href="/api/all">Get my lyrical STATS!</a></button>
 
   		</div>
 
@@ -123,24 +123,24 @@
                             <div class="tab-pane active" id="Login">
                                 <form role="form" class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="email" class="col-sm-8 control-label">
+                                    <label for="userID" class="col-sm-8 control-label">
                                         userID</label>
                                     <div class="col-sm-12">
-                                        <input type="email" class="form-control" id="email1" placeholder="e-mail" />
+                                        <input type="email" class="form-control" id="inputID" placeholder="your userID" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1" class="col-sm-3 control-label">
+                                    <label for="inputPassword" class="col-sm-3 control-label">
                                         password</label>
                                     <div class="col-sm-12">
-                                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="password" />
+                                        <input type="email" class="form-control" id="inputPassword" placeholder="password" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-2">
                                     </div>
                                     <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-primary btn-sm">
+                                        <button type="submit" id="modalClick" class="btn btn-primary btn-sm">
                                             Submit</button>
                                     </div>
                                 </div>
@@ -236,7 +236,31 @@ $(document).ready(function(){
      
      };
 
-     $.get("/api/all", artistData
+     $.get("/api/all", artistData)
+</script>
+
+<script>
+  $("#modalClick").on("click", function(event) {
+     event.preventDefault();
+
+     // Here we grab the form elements
+     var userIDData = {
+       userLogID: $("#inputID").val().trim(),
+     
+     };
+
+     $.get("/api/all", userIDData)
+
+  $("#findRapStats").on("click", function(event) {
+     event.preventDefault();
+
+     // Here we grab the form elements
+     var userPWData = {
+       userLogPW: $("#inputPassword").val().trim(),
+     
+     };
+
+     $.get("/api/all", userPWData)
 </script>
 
 </body>
