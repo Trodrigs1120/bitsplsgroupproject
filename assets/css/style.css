@@ -132,7 +132,7 @@ h2 {
 	margin-left: -40%;
 }
 
-#rapper-search {
+#searchDiv {
 	margin: auto;
 
 }
@@ -146,6 +146,7 @@ h2 {
 	position: relative;
 	margin: 100px;
 }
+
 .typeahead, .tt-query, .tt-hint {
 	border: 2px solid #CCCCCC;
 	border-radius: 8px;
