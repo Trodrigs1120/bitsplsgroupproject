@@ -75,6 +75,10 @@ h2 {
 	font-size: 2.3em;
 }
 
+.hhLiterati {
+	font-size: 30px;
+}
+
 #centerHeading {
 	align-self: center;
 }
@@ -123,10 +127,6 @@ h2 {
 	opacity: 0.8;
 }
 
-.hhLiterati {
-	font-size: 30px;
-}
-
 #bigName {
 	font-size: 2.5em;
 	margin-left: -40%;
@@ -142,11 +142,13 @@ h2 {
 }
 
 
-.bs-example {
+/*.bs-example {
 	font-family: sans-serif;
 	position: relative;
 	margin: 100px;
-}
+}*/
+
+/*==========================typeahead stuff======================*/
 
 .typeahead, .tt-query, .tt-hint {
 	border: 2px solid #CCCCCC;
