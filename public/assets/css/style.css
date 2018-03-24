@@ -1,0 +1,205 @@
+/*Motion Background*/
+
+body {
+	background-color: black;
+}
+
+
+video {
+
+	position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100
+}
+
+#ourVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.2;
+	/* z-index: 1; */
+}
+
+
+#theModalButton {
+	opacity: 0.8;
+	text-decoration-color: white;
+}
+
+.invis {
+  background-color: transparent;
+  border-color: #ccc;
+  /*text-decoration-color: blue;*/
+}
+
+.whiteText {
+	color: white;
+}
+
+/*Navigation Bar*/
+
+h2 {
+	margin-left: 4%;
+}
+
+
+@font-face {
+  font-family: 'steely';
+  src: url('./Panda-Power-St.ttf'); /* IE9 Compat Modes */
+  src: url('./Panda-Power-St.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       /*url('webfont.woff2') format('woff2'), /* Super Modern Browsers */*/
+       /*url('webfont.woff') format('woff'), /* Pretty Modern Browsers */*/
+       url('./Panda-Power-St.ttf')  format('truetype'), /* Safari, Android, iOS */
+       /*url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */*/
+}
+
+
+/*body {
+  font-family: 'steely', Fallback, sans-serif;
+}*/
+
+
+.steely {
+	font-family: 'steely', Fallback, sans-serif;
+}
+
+.bigType {
+	font-size: 3em;
+}
+
+.biggishType {
+	font-size: 2.3em;
+}
+
+.hhLiterati {
+	font-size: 30px;
+}
+
+#centerHeading {
+	align-self: center;
+}
+
+#userID {
+	/*background-color: blue;*/
+	/*margin-left: auto;*/
+	opacity:0;
+}
+
+#loginRegister {
+	/*background-color: blue;*/
+	/*margin-right: auto;*/
+}
+
+#artistBlock {
+
+}
+
+#artistImage {
+	/*position: absolute;*/
+	/* margin-left: -40%; */
+	height: 220px;
+	width: 220px;
+	
+}
+
+#frontpage {
+
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	/* margin: 80px; */
+	margin-top: 40px;
+	opacity: 0.8;
+}
+
+#artistpage {
+
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	margin: 80px;
+	margin-top: 40px;
+	opacity: 0.8;
+}
+
+#bigName {
+	font-size: 2.5em;
+	/* margin-left: -40%; */
+}
+
+#searchDiv {
+	margin: auto;
+
+}
+
+#findRapStats {
+	margin-left: 14%;
+}
+
+
+/*.bs-example {
+	font-family: sans-serif;
+	position: relative;
+	margin: 100px;
+}*/
+
+/*==========================typeahead stuff======================*/
+
+.typeahead, .tt-query, .tt-hint {
+	border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 22px; /* Set input font size */
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 396px;
+}
+.typeahead {
+	background-color: #FFFFFF;
+}
+.typeahead:focus {
+	border: 2px solid #0097CF;
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+}
+.tt-menu {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 422px;
+	z-index: 0;
+	position: relative;
+	top: -1000px;
+	z-index:-1;
+}
+.tt-suggestion {
+	font-size: 22px;  /* Set suggestion dropdown font size */
+	padding: 3px 20px;
+}
+.tt-suggestion:hover {
+	cursor: pointer;
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+
+.tt-dropdown-menu {
+     background-color: transparent;
+}

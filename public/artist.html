@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Hip-Hop Literati</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Redressed" rel="stylesheet"> -->
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!--Motion Background-->
+	<video autoplay muted loop id="ourVideo">
+
+		<source src="audienceBacker.mp4" type="video/mp4">
+
+	</video>
+
+<!--Main-screen-->
+<div class="container" id="artistpage">
+
+  <div class="row">
+    
+    <div class="col-md-4" id="userID">
+      <p>(UserID signifier - when visible)</p>
+    </div>
+
+    <div class="col-md-4">
+      
+    </div>
+
+    <div class="col-md-4">
+      <p class="steely biggishType">Hip-Hop Literati</p>
+    </div>
+
+  </div>
+
+  <br>
+  
+ 
+<!--   <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br> -->
+<!-- 
+  <br>
+
+  <br> -->
+  <div class="row">
+  <div class="col-sm-4" id="statsRendered">
+
+    placeholder text
+
+  </div>
+  <div class="col-sm-4" id="statsRendered2">
+
+  </div>
+  <div class="col-sm-4" id="statsRendered3">
+
+  </div>
+</div>
+  <script id="statsTemplate" type="text/x-handlebars-template">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{{artistUrl}}}" alt="{{{artist}}}" id="artistImage">
+            <p id="bigName"> {{{artist}}}
+              
+            </p>
+        
+      
+         
+      <h4> artist: {{{artist}}} </h3>
+    
+      <h4># of unique words found: {{{uniqueWords}}} </h3>
+      <!-- may need to be unique_words -->
+      <h4># of songs: {{{numOfSongs}}} </h3>
+
+      <h4>words per song: {{{wordsPerSong}}} </h3>
+
+      <h4>unique words per song: {{{uniqueWordsPerSong}}} </h3>
+        <!-- change this to uniqueWPS? -->
+
+      <h4>percent unique: {{{ percentUnique}}} </h3>
+      </div>
+    </div>
+
+  </script>
+  <script id="statsTemplate2" type="text/x-handlebars-template">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{{artistUrl}}}" alt="{{{artist}}}" id="artistImage">
+            <p id="bigName"> {{{artist}}}
+              
+            </p>
+        
+      
+          
+    
+      <h4> artist: {{{artist}}} </h3>
+    
+      <h4># of unique words found: {{{uniqueWords}}} </h3>
+      <!-- may need to be unique_words -->
+      <h4># of songs: {{{numOfSongs}}} </h3>
+
+      <h4>words per song: {{{wordsPerSong}}} </h3>
+
+      <h4>unique words per song: {{{uniqueWordsPerSong}}} </h3>
+        <!-- change this to uniqueWPS? -->
+
+      <h4>percent unique: {{{ percentUnique}}} </h3>
+        </div>
+    </div>
+
+  </script>
+  <script id="statsTemplate3" type="text/x-handlebars-template">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{{artistUrl}}}" alt="{{{artist}}}" id="artistImage">
+            <p id="bigName"> {{{artist}}}
+              
+            </p>
+        
+      
+          
+    <div>
+      <h4> artist: {{{artist}}} </h3>
+    
+      <h4># of unique words found: {{{uniqueWords}}} </h3>
+      <!-- may need to be unique_words -->
+      <h4># of songs: {{{numOfSongs}}} </h3>
+
+      <h4>words per song: {{{wordsPerSong}}} </h3>
+
+      <h4>unique words per song: {{{uniqueWordsPerSong}}} </h3>
+        <!-- change this to uniqueWPS? -->
+
+      <h4>percent unique: {{{ percentUnique}}} </h3>
+    </div>
+  </div>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+</body>
+
+</html>

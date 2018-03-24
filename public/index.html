@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Hip-Hop Literati</title>
+  <!-- <script src="./assets/javascript/jquery-3.3.1.min.js"></script> -->
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  
+
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="javascript/main.js"></script>
+  <!-- <script src="./assets/javascript/bootstrap-typeahead.js"></script> -->
+  <script type='text/javascript' src='handlebars-v4.0.11.js'></script>
+  <script  type="text/javascript" src="typeahead.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+</head>
+
+<body>
+
+<!--video background loop-->
+	<video autoplay muted loop id="ourVideo">
+
+		<source src="audienceBacker.mp4" type="video/mp4">
+
+	</video>
+
+<!--main page-->
+<div class="container" id="frontpage">
+
+  <div class="row">
+    
+    <div class="col-md-4" id="userID">
+      <p class="invis">(UserID signifier - when visible)</p>
+    </div>
+
+    <div class="col-md-4">
+      <!-- <p>(UserID signifier - when visible)</p> -->
+    </div>
+
+    <div class="col-md-4" id="loginRegister">
+      <button class="btn invis" id="theModalButton" data-toggle="modal" data-target="#myModal">
+    <p class="whiteText">login/register</p></button>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-md-2">
+      <!-- <p class="text-center"> Hip-Hop Literati</p> -->
+    </div>
+
+    <br>
+
+    <div class="col-md-8">
+      <p class="steely bigType"> Hip-Hop Literati</p>
+    </div>
+
+    <div class="col-md-2">
+      <!-- <p class="text-center"> Hip-Hop Literati</p> -->
+    </div>
+
+  </div>
+
+  <div class="row">
+    <p></p>
+  </div>
+
+  <div class="row">
+    <p></p>
+  </div>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <div class="row">
+
+      <div class="col-md-4" id="searchDiv">
+
+        <input type="text" class="typeahead tt-query" id="rapper-search" autocomplete="off" spellcheck="false">
+        <div class="btn btn-success"><a href="/artist.html" onclick="location.href='/api/all';">Get my lyrical STATS!</a> </div>
+        
+        
+  		</div>
+
+  </div>
+
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <a href="http://www.google.com</a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- Nav tabs -->
+                        <ul class="nav">
+                            <li class="active"><a href="#Login">login/register</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Login">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="userID" class="col-sm-8 control-label">
+                                        userID</label>
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control" id="inputID" placeholder="your userID" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="col-sm-3 control-label">
+                                        password</label>
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control" id="inputPassword" placeholder="password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="submit" id="modalClick" class="btn btn-primary btn-sm">
+                                            Submit</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="Registration">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Name</label>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <select class="form-control">
+                                                    <option>Mr.</option>
+                                                    <option>Ms.</option>
+                                                    <option>Mrs.</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile" class="col-sm-2 control-label">
+                                        Mobile</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            Save & Continue</button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            Cancel</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   
+    // local dataset
+    var artistsComplete = ['50 cent', 'Childish Gambino', 'Death Grips', 'DMX', 'Drake', 'Eminem', 'Future', 'Kanye West', 'Kendrick Lamar', 'Killer Mike', 'Logic', 'Ludacris', 'MF Doom', 'Nas', 'Nelly', 'Outkast', 'Redman', 'Rick Ross', 'Snoop Dog', 'Wu-tang Clan'];
+    
+    // suggestion engine
+    var artistsComplete = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: artistsComplete
+    });
+    
+    // typeahead
+    $('.typeahead').typeahead({
+        hint: true,
+        highlight: true, /* Enable substring highlighting */
+        minLength: 1 /* Specify minimum characters required for showing result */
+    },
+    {
+        name: 'artistsComplete',
+        source: artistsComplete
+    });
+});  
+
+  $("#findRapStats").on("click", function(event) {
+    // event.preventDefault();
+
+     // Here we grab the form elements
+     var artistData = $("#rapper-search").val().trim()
+     
+     
+     console.log(artistData)
+    // I doubt this is right
+    $.get("/artist.html")
+        console.log( "call was preformed" );
+      
+    })
+  
+
+  $("#modalClick").on("click", function(event) {
+     event.preventDefault();
+
+     // Here we grab the form elements
+     var userIDData = {
+       userLogID: $("#inputID").val().trim(),
+     
+     };
+
+     $.get("/api/all", userIDData)
+    })
+
+    
+</script>
+
+</body>
+
+</html>
