@@ -1,8 +1,19 @@
 // This .on("click") function will trigger the AJAX Call
-      
+  
 
       $(document).ready (function () {
-
+        function getTemplateAjax(path, callback) {
+          var source, template;
+          jqueryNoConflict.ajax({
+            url: "/api/random",
+            success: function (data) {
+                source = data;
+                template = Handlebars.compile(source);
+                if (callback) callback(template);
+            }
+        });
+    }
+        
         var source = $("#statsTemplate").html ();
         var template = Handlebars.compile(source);
 
