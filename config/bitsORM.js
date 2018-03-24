@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
     //look in slack for connection details
     host: "",
-    port: 80,
+    port: 8080,
 
     // Your username
     user:"",
